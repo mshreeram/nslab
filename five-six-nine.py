@@ -90,7 +90,6 @@ def sdes_enc(message, key):
   first_half = Fiestal(initial_permutation, subkey1)
   second_half = Fiestal(first_half[4:] + first_half[:4], subkey2)
 
-  # finally, finally, finally apply the inital permutation again to xor_3
   final_cipher_text = [second_half[i - 1] for i in IP_INVERSE]
 
   print("fct: ", final_cipher_text)
