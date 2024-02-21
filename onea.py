@@ -5,9 +5,13 @@ s = int(input("Enter a shift value: "))
 
 def ceasar_enc(text, s):
   result = ""
-  text = text.lower()
+  #text = text.lower()
+  #we cannot change the data given by user to upper case or lower case
   for char in text:
-    result += chr((ord(char) + s - 97) % 26 + 97)
+    if(char.islower()):
+      result += chr((ord(char) + s - 97) % 26 + 97)
+    else:
+      result += chr((ord(char) + s - 65) % 26 + 65)
   print(result)
 
 ceasar_enc(text, s)
