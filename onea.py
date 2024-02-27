@@ -3,6 +3,7 @@
 text = "Information Technology"
 s = int(input("Enter a shift value: "))
 
+
 def ceasar_enc(text, s):
   result = ""
   #text = text.lower()
